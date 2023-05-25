@@ -1,0 +1,60 @@
+html, body {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    background-color: #111;
+}
+
+.outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+    position: relative;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    
+}
+.outer:hover{
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.button {
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+    
+}
+
+.outer button {
+    background: #1b1b1b;
+    color:azure;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+    z-index: 9;
+}
+
+.outer:hover span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: inherit; /*herda o background de .outer*/
+    border-radius: 50px;
+    filter: blur(6px);
+    
+}
+
